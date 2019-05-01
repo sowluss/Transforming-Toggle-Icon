@@ -5,7 +5,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(#fff 0%, #fff 50%, #393e46 50%, #393e46 100%);
+  background: linear-gradient(#fff 0%, #fff 50%, #560d0d 50%, #560d0d 100%);
+  font-family: sans-serif;
 }
 
 .navigation {
@@ -32,4 +33,58 @@ body {
 
 .navigation input:checked~.menu {
   width: 400px;
+}
+
+.menu li {
+  list-style: none;
+  margin: 0 9px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: .5;
+}
+
+.menu li a:hover {
+  color: #560d0d;
+}
+
+.navigation input {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.navigation span {
+  position: absolute;
+  left: 26px;
+  width: 32px;
+  height: 4px;
+  background: #666;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.navigation input:checked~span {
+  background: #d61d4e;
+}
+
+.navigation span:nth-child(2) {
+  transform: translateY(-8px);
+}
+
+.navigation input:checked~span:nth-child(2) {
+  transform: translateY(0) rotate(45deg);
+}
+
+.navigation span:nth-child(3) {
+  transform: translateY(8px);
+}
+
+.navigation input:checked~span:nth-child(3) {
+  transform: translateY(0) rotate(-45deg);
 }
